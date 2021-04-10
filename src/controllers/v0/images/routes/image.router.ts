@@ -10,7 +10,7 @@ const router: Router = Router();
 //});
 
 router.get('/filteredimage', async (req, res) => {
-    let { image_url } = req.query;
+    let image_url: string = req.query.image_url;
 
     if (!image_url)
         return res.status(400).send('image_url is required!');
